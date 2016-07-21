@@ -1,0 +1,6 @@
+{
+  "name": "Staticfileproxy",
+  "tagline": "static file proxy with gin, write in golang",
+  "body": "staticfileproxy\r\n===============\r\n\r\nimports `gin-gonic` and `go-bindata`\r\n\r\nquickly static file server service for small team or web server.\r\n\r\n-\tList your static file in html which was stored in the local special folder\r\n-\tList your file which was bind in the bindata.go by go-bindata\r\n\r\n用于快速的文件分享，把特定文件夹的满足特定要求比如扩展名的文件，展示在浏览器中。 适用于团队间的快速分享。\r\n\r\n```\r\ngo get -u github.com/devuser/staticfileproxy\r\ncd $GOPATH/src/github.com/devuser/staticfileproxy\r\ncd cmd\r\ncp config/config.default.json config/config.json\r\necho \"modify the default config json file with your local static files folder such as ./staticfiles\"\r\ngo run staticfilep-server.go\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
