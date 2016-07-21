@@ -1,0 +1,8 @@
+{
+    "gin_mode": "debug",
+    "host": "127.0.0.1",
+	"port": 8081,
+    "apiprefix": "/api/v1",
+    "static_files": "staticfiles",
+    "redis_host": "192.168.200.198:6381"
+}
