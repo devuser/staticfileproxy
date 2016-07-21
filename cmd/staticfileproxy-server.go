@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	m "github.com/boyosoft/staticfileproxy"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/render"
-	m "github.com/boyosoft/staticfileproxy"
 	"html/template"
 	"io/ioutil"
 	"log"
@@ -56,13 +56,13 @@ func getDefaultCode(path string) (code template.HTML) {
 func loadStaticFiles(root string) (staticFiles []string, err error) {
 	staticFiles = make([]string, 0, 1000)
 	// Read content into docs field.
-	extMap := map[string]bool {
-		".rar":true,
-		".zip":true,
-		".tar.gz":true,
-		".tar":true}
+	extMap := map[string]bool{
+		".rar":    true,
+		".zip":    true,
+		".tar.gz": true,
+		".tar":    true}
 	fn := func(p string, info os.FileInfo, err error) error {
-		if _, found := extMap[filepath.Ext(p)];!found {
+		if _, found := extMap[filepath.Ext(p)]; !found {
 			return nil
 		}
 		f, err := os.Open(p)
